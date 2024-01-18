@@ -136,9 +136,10 @@ GameObject:
   - component: {fileID: 177359241}
   - component: {fileID: 177359240}
   - component: {fileID: 177359244}
+  - component: {fileID: 177359245}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 6
+  jumpForce: 10
+  maxHealth: 3
+  damageCooldown: 1
 --- !u!50 &177359241
 Rigidbody2D:
   serializedVersion: 4
@@ -245,7 +248,7 @@ Transform:
   m_GameObject: {fileID: 177359239}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2867872, y: 0.20490766, z: 0}
+  m_LocalPosition: {x: -10.09, y: -2.13, z: 0}
   m_LocalScale: {x: 1, y: 1.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -296,6 +299,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &177359245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177359239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc4ebf2b57c577408ed4b63080d329b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 177359239}
+  respawnPoint: {fileID: 0}
 --- !u!1 &1037951545
 GameObject:
   m_ObjectHideFlags: 0
