@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     public float totalMoveDistance = 5f;
     public float directionChangeCooldown = 2f; // Adjust cooldown time as needed
 
-    private bool movingRight = true;
+    public bool movingRight = true;
     private Vector3 startPosition;
     private float directionChangeTimer;
 
