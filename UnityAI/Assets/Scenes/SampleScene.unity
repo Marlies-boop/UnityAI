@@ -1336,7 +1336,7 @@ Transform:
   m_GameObject: {fileID: 843267071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.6, y: 1.2, z: 0.1424043}
+  m_LocalPosition: {x: 10.6, y: 0.8900001, z: 0.1424043}
   m_LocalScale: {x: -1.4516191, y: 1.4182894, z: 1.4182894}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 6
+  jumpForce: 10
   maxHealth: 3
   damageCooldown: 1
 --- !u!50 &1058376145
@@ -2166,7 +2166,7 @@ Transform:
   m_GameObject: {fileID: 1215620270}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.098, y: 1.4, z: 0.1424043}
+  m_LocalPosition: {x: -4.098, y: 1.09, z: 0.1424043}
   m_LocalScale: {x: 1.4182894, y: 1.4182894, z: 1.4182894}
   m_ConstrainProportionsScale: 0
   m_Children: []
