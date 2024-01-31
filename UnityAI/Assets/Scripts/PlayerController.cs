@@ -74,6 +74,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log(currentHealth);
             StartCoroutine(DamageCooldown());
         }
+        else if (collision.gameObject.CompareTag("DeathCollider"))
+        {
+            Die();
+        }
     }
     IEnumerator DamageCooldown()
     {
