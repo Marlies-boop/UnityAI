@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
 
     private bool canTakeDamage = true;
-    public float damageCooldown = 1f;
+    public float damageCooldown = -10f;
+    public float timeBeforeDeath = 1f;
+
+    public float fallDeathY = 5f; // Set the Y-coordinate below which the player dies
 
     void Start()
     {
@@ -21,6 +24,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Check if the player is below the fallDeathY coordinate
+        if (transform.position.y < fallDeathY)
+        {
+            Die();
+        }
+
         // Check if player is grounded
         isGrounded = IsGrounded();
 
@@ -58,12 +67,17 @@ public class PlayerController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (canTakeDamage)
+        // Check if the collision object has the "Enemy" tag
+        if (collision.gameObject.CompareTag("Enemy") && canTakeDamage)
         {
             TakeDamage(1);
+            Debug.Log(currentHealth);
             StartCoroutine(DamageCooldown());
         }
-
+        else if (collision.gameObject.CompareTag("DeathCollider"))
+        {
+            Die();
+        }
     }
     IEnumerator DamageCooldown()
     {
