@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
 
         // Check if player is grounded
         isGrounded = IsGrounded();
+        Debug.Log(IsGrounded());
 
         // Player movement
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -49,9 +50,22 @@ public class PlayerController : MonoBehaviour
 
     bool IsGrounded()
     {
-        float raycastLength = 0.1f;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastLength, LayerMask.GetMask("Ground"));
-        return hit.collider != null;
+        float raycastLength = 0.75f;
+        Vector2 raycastOrigin = new Vector2(transform.position.x, transform.position.y - 0.05f); // Adjusted origin to slightly below the player
+
+        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastLength, LayerMask.GetMask("Ground"));
+
+        // Draw a debug ray to visualize the raycast
+        Debug.DrawRay(raycastOrigin, Vector2.down * raycastLength, Color.red);
+
+        // Check if the raycast hits anything
+        if (hit.collider != null && hit.collider != gameObject.GetComponent<Collider2D>())
+        {
+            // Debug.Log("Grounded! Collided with: " + hit.collider.name); // Uncomment for debugging
+            return true;
+        }
+
+        return false;
     }
 
     // Function to handle player taking damage

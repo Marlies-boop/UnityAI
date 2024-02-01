@@ -23,7 +23,7 @@ public class PlatformMovement2 : MonoBehaviour
 
     void MovePlatform()
     {
-        print(movingRight);
+        //print(movingRight);
         // Calculate movement direction
         float direction = movingRight ? 1f : -1f;
 
@@ -37,7 +37,7 @@ public class PlatformMovement2 : MonoBehaviour
         {
             // Change direction and reset velocity
             movingRight = !movingRight;
-            Debug.Log(movingRight);
+            //Debug.Log(movingRight);
             rb.velocity = Vector2.zero;
         }
     }
