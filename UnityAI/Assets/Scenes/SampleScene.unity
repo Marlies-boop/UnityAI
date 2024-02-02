@@ -596,6 +596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5623831035702892875, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6046044137799507962, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 92
@@ -1134,6 +1138,10 @@ PrefabInstance:
     - target: {fileID: 2510947503480667632, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
       propertyPath: m_Name
       value: platform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623831035702892875, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6046044137799507962, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2466,6 +2474,10 @@ PrefabInstance:
     - target: {fileID: 2510947503480667632, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
       propertyPath: m_Name
       value: platform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623831035702892875, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6046044137799507962, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12815,6 +12827,10 @@ PrefabInstance:
     - target: {fileID: 2510947503480667632, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
       propertyPath: m_Name
       value: platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623831035702892875, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6046044137799507962, guid: 8a90180f944f48e4f88204eed7355cef, type: 3}
       propertyPath: m_LocalPosition.x
